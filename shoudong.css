@@ -1,0 +1,126 @@
+  
+        
+        
+        
+        .Manual-container {
+            text-align: center;
+            max-width: 600px;
+        }
+        
+        .Manual-h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        
+        .Manual-open-btn {
+            background: #b5838d;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-right: 30px;;
+        }
+        
+        .Manual-open-btn:hover {
+            background: #45a049;
+        }
+        
+        /* 弹窗样式 */
+        .Manual-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .Manual-modal-overlay.active {
+            display: flex;
+        }
+        
+        .Manual-modal {
+            background: white;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: modalShow 0.3s ease;
+        }
+        
+        @keyframes modalShow {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .Manual-modal-header {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .Manual-modal-title {
+            font-size: 20px;
+            color: #333;
+        }
+        
+        .Manual-close-btn {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+        }
+        
+        .Manual-close-btn:hover {
+            color: #333;
+        }
+        
+        .Manual-modal-body {
+            padding: 20px;
+        }
+        
+        .Manual-modal-footer {
+            padding: 15px 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+        }
+        
+        .Manual-modal-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .Manual-modal-btn.confirm {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .Manual-modal-btn.cancel {
+            background: #f44336;
+            color: white;
+        }
+        
+        .Manual-modal-btn:hover {
+            opacity: 0.9;
+        }

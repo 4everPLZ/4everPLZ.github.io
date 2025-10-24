@@ -1,0 +1,121 @@
+        body{
+            margin: 0px;
+        }
+        .flex{
+            display: flex;
+        }
+        .body-side-area{
+            width: 100px;
+            height: 1000vh;
+            background-color: #5a5766;
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .body-daohang{
+            width: 60px;
+            height: 60px;
+            brder: 1px solid black ;
+            margin-top: 20px;
+            text-align: center;
+
+        }
+        .body-side-text{
+            margin: 0px;
+        }
+        .body-side-text:hover{
+            text-decoration: underline;
+        }
+        
+
+        
+        .body-head{
+            display: flex;
+            height: 100px;
+            background-color: #6d6875;
+            
+            
+            
+        }
+        .body-nav-area{
+            display: flex;
+            flex:1;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        
+        .body-search-area{           
+            display: flex;
+            background-color: #6d6875;  
+            width: 100px;
+            height: 100px;
+            margin-right: 250px;
+            align-items: center;           
+        }
+        .body-search{
+            width: 50px;
+            height: 50px;
+            brder: 1px solid black;
+            display: flex;
+            margin-left: auto;
+            
+            
+        }
+        .body-login-area{       
+            display: flex;           
+            background-color: #6d6875;        
+            height: 100px;
+            align-items: center;           
+        }
+        .body-login{
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            display: flex;
+            margin-left: auto;
+            
+        }
+        .body-main-area{
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            flex:1;
+        }
+        .body-text-main{
+            font-size: 35px;
+            text-decoration: none;
+            margin: 20px;
+            color:black;
+            
+        }
+        .body-text-main:hover{
+            text-decoration: underline;
+        }
+        .gamesection{
+            margin-bottom: px;
+            borer: 1px solid #ddd;
+            padding: px;
+            border-radius:3px;        
+            
+        }
+        .content{
+            height:200px;
+            width:300px;
+            margin:2px;
+            border: 1px solid #ccc1c1;
+            border-radius: 10px;
+            display:flex;
+            align-items: ceter;
+            justify-items: center;
+            flex-direction: column;
+            padding:5px;
+
+
+        }
+        .ico{
+            width:60px;
+            height: auto;
+        }
