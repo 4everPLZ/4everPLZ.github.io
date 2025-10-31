@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal{
+            width: 600px;
+            height: auto;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            z-index: 1000;
+            display: none;
+            background-color: aliceblue;
+            
+        }
+        .modal.active{
+            display: flex;
+        }
+        .text-modal{
+            font-size: 40px;
+            margin: 0;
+        }
+        .search-area-area{
+            display: flex;
+            flex-direction: row;
+
+        }
+        .search-area{
+            
+            width: 70%;
+            height: auto;
+            border: 1px solid black;
+            margin-left: 10px;
+            
+            margin-top: 40px;
+        }
+        .ico-area{
+            width: 60px;
+            height: 60px;
+            border: 1px solid black;
+            margin-left: 50px;
+            margin-top: 40px;
+        }
+        .ico{
+            width: 60px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="openModalsearch()">adadadad</button>
+    <div id="modal" class="modal">
+        <p class="text-modal">请输入内容</p>
+        <div class="search-area-area">
+            <div class="search-area">
+                <p style="font-size: 20px; margin: 0;">在此输入内容</p>
+            </div>
+            <div class="ico-area">
+                <a href><img class="ico"src="search.png" ></a>
+            </div>
+        </div>
+    </div>
+<script>
+    const Modal = document.getElementById('modal')
+
+
+    function openModalsearch(){
+        Modal.classList.add('active');
+    }
+    
+</script>
+</body>
+</html>

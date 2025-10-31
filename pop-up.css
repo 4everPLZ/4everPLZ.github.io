@@ -1,0 +1,117 @@
+.Auto-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .Auto-modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .Auto-modal {
+            background: white;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            transform: translateY(-50px);
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+        
+        .Auto-modal-overlay.active .Auto-modal {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .Auto-modal-header {
+            padding: 20px 25px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .Auto-modal-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        .Auto-close-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+        
+        .Auto-close-btn:hover {
+            color: #333;
+        }
+        
+        .Auto-modal-body {
+            padding: 25px;
+            line-height: 1.6;
+        }
+        
+        .Auto-modal-footer {
+            padding: 15px 25px;
+            border-top: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .Auto-modal-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            background: #4299e1;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        
+        .Auto-modal-btn:hover {
+            background: #3182ce;
+        }
+        
+        .Auto-checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+        
+        .Auto-checkbox-group input {
+            margin-right: 8px;
+        }
+        
+        /* 页面内容样式 */
+        .Auto-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .Auto-h1 {
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        
+        .Auto-p {
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }

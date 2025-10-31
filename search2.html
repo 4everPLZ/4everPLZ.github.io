@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索弹窗</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, );
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+        }
+        
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background: #fff;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        .modal{
+            width: 500px;
+            height: auto;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            z-index: 1000;
+            display: none;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .modal.active {
+            display: flex;
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .text-modal{
+            font-size: 28px;
+            margin: 0;
+            padding: 30px 30px 20px;
+            color: #333;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .search-area-area{
+            display: flex;
+            flex-direction: row;
+            padding: 0 30px 30px;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .search-area{
+            flex: 1;
+            height: 50px;
+            border: 2px solid #e1e5e9;
+            border-radius: 12px;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+            background: #f8f9fa;
+        }
+        
+        .search-area:hover {
+            border-color: #667eea;
+            background: white;
+        }
+        
+        .search-area:focus-within {
+            border-color: #667eea;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .search-area p {
+            font-size: 16px;
+            margin: 0;
+            color: #6c757d;
+        }
+        
+        .ico-area{
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .ico-area:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        .ico{
+            width: 24px;
+            height: 24px;
+            filter: brightness(0) invert(1);
+        }
+        
+        /* 添加关闭按钮 */
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #6c757d;
+            padding: 5px;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .close-btn:hover {
+            background: #f8f9fa;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" style="margin-right: 40px;">点我返回</a>
+    <button onclick="openModalsearch()">打开搜索</button>
+    <div id="modal" class="modal">
+        <button class="close-btn" onclick="closeModal()">×</button>
+        <p class="text-modal">请输入内容</p>
+        <div class="search-area-area">
+            <div class="search-area">
+                <p style="font-size: 16px; margin: 0; color: #6c757d;">在此输入内容...</p>
+            </div>
+            <div class="ico-area">
+                <a href="#"><img class="ico" src="search.png" alt="搜索"></a>
+            </div>
+        </div>
+    </div>
+    
+<script>
+    const Modal = document.getElementById('modal')
+
+    function openModalsearch(){
+        Modal.classList.add('active');
+    }
+    
+    function closeModal(){
+        Modal.classList.remove('active');
+    }
+    
+    // 点击弹窗外部关闭
+    Modal.addEventListener('click', function(e) {
+        if (e.target === Modal) {
+            closeModal();
+        }
+    });
+    
+    // ESC键关闭
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+</script>
+</body>
+</html>
