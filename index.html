@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>English Learning Hub</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; background: #f0f2f5; margin: 0; min-height: 100vh; }
+
+        /* 弹窗遮罩 */
+        .modal-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        .modal {
+            background: white;
+            padding: 40px 50px;
+            border-radius: 15px;
+            max-width: 450px;
+            width: 90%;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            animation: popIn 0.3s ease;
+        }
+        @keyframes popIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to   { transform: scale(1); opacity: 1; }
+        }
+        .modal h2 { color: #2a5d8f; margin-bottom: 25px; font-size: 22px; }
+        .modal .names { font-size: 18px; color: #333; line-height: 2; margin: 15px 0; }
+        .modal .names span { color: #2a5d8f; font-weight: bold; }
+        .modal .disclaimer { font-size: 13px; color: #888; margin: 20px 0 25px; line-height: 1.6; }
+        .modal button {
+            background: #2a5d8f;
+            color: white;
+            border: none;
+            padding: 10px 40px;
+            font-size: 15px;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .modal button:hover { background: #1e4a72; }
+    </style>
+</head>
+<body>
+    <!-- 弹窗 -->
+    <div class="modal-overlay" id="welcomeModal">
+        <div class="modal">
+            
+            <p class="names">
+                This site was created by:<br>
+                <span>袁子杰</span> · <span>王瑞程</span> · <span>仇俊虎</span>
+            </p>
+            <p class="disclaimer">
+                All resources collected on this site are sourced from the Internet.<br>
+                For educational use only.
+            </p>
+            <button onclick="enterSite()">Enter the Hub →</button>
+        </div>
+    </div>
+
+    <script>
+        function enterSite() {
+            // 关弹窗 + 跳主页
+            document.getElementById('welcomeModal').style.display = 'none';
+            location.replace('./pages/index/index.html');
+        }
+    </script>
+</body>
+</html>

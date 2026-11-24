@@ -1,0 +1,60 @@
+﻿﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search CET Papers</title>
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="logo">English Hub</div>
+            <div class="sidebar-item"><a href="../index/index.html">Home</a></div>
+            <div class="sidebar-item"><a href="../vocabulary/vocabulary.html">Vocabulary</a></div>
+            <div class="sidebar-item"><a href="../reading/reading.html">Reading</a></div>
+        </aside>
+        <main class="main">
+            <nav class="topnav">
+                <a href="../CET-4/CET-4.html">CET-4</a>
+                <a href="../CET-6/CET-6.html">CET-6</a>
+                <a href="../listening/listening.html">Listening</a>
+                <a href="../search/search.html" style="background:rgba(255,255,255,0.25)">Search</a>
+            </nav>
+            <div class="content-wrap">
+                <section class="content">
+                    <h2>Search CET Papers</h2>
+                    <p class="subtitle">Type any keyword — year, exam type, month, or set number</p>
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="e.g. 2025, CET-6 2025-12, cet4 2025 06 1..." onkeydown="if(event.key==='Enter')doSearch()">
+                        <br>
+                        <button onclick="doSearch()"> Search</button>
+                        <div class="tags">
+                            <span style="color:#888;font-size:13px;">Quick:</span>
+                            <a href="#" onclick="quickFilter('2025');return false;">2025</a>
+                            <a href="#" onclick="quickFilter('CET-4');return false;">CET-4</a>
+                            <a href="#" onclick="quickFilter('CET-6');return false;">CET-6</a>
+                            <a href="#" onclick="quickFilter('CET-6 2025-12');return false;">CET-6 2025-12</a>
+                            <a href="#" onclick="quickFilter('set1');return false;">Set 1</a>
+                            <a href="#" onclick="quickFilter('');return false;">All</a>
+                        </div>
+                    </div>
+                    <!-- Dynamic search results -->
+                    <div id="searchResults" style="margin-top:30px;"></div>
+                </section>
+                <aside class="side-panel">
+                    <div class="info-card"><h3>Search Tips</h3><p>Input examples:<br>• <b>2025</b> → all 2025 papers<br>• <b>CET-4 2024</b> → CET-4 of 2024<br>• <b>cet6 2025 12</b> → Dec 2025 CET-6<br>• <b>2025 set1</b> → all Set 1 of 2025</p></div>
+                    <div class="info-card"><h3>Current Data</h3><p>Total 18 papers: CET-4 (2024-2026) + CET-6 (2025-2026).</p></div>
+                </aside>
+            </div>
+        </main>
+    </div>
+    <footer class="footer">
+        <a href="../../images/qrcode.png">Support Us</a>
+        · <a href="">Filing Number</a>
+        · <a href="">About</a>
+        · This is a non-profit site. All resources are collected from the Internet.
+    </footer>
+    <script src="search.js"></script>
+</body>
+</html>
